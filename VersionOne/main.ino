@@ -1,6 +1,5 @@
 
-
-#include "HID-Project.h"
+//#include "Keyboard.h"
 #include "keys.h"
 
 int zdown = 0;
@@ -13,11 +12,11 @@ void setup() {
     pinMode(KEYS[i][0], INPUT_PULLUP);
   }
   pinMode(5, OUTPUT);
-  Consumer.begin();
+  Keyboard.begin();
   Serial.begin(9600);
-
 }
 // This check if the key pressed is a consumer code; returns true or false accordingly
+/*
 bool isCons(int key){
   for(int l = (sizeof(CONS) / 4) - 1; l >= 0; l --){
     if(key == CONS[l]){
@@ -26,19 +25,28 @@ bool isCons(int key){
   }
   return(false);
 }
-
-void loop() {  
-  for(int i = klen - 1; i >= 0; i --){
-    if(digitalRead(KEYS[i][0]) == LOW and KEYS[i][1] == 0){
-      //Serial.println(i);
-      Serial.println(isCons(ASSMENTS[i][0]));
-      KEYS[i][1] = 1;
-      delay(debounce);
-      
-    }else if(digitalRead(KEYS[i][0]) == HIGH and KEYS[i][1] == 1){
-      KEYS[i][1] = 0;
+// 
+*/
+void keyAction(int k, bool pr){
+  for(int i = 0; i < 10; i ++){
+    int kc = ASSMENTS[k][i];
+    if(pr == 1){
+      Keyboard.press(kc);
+    }else{
+      Keyboard.release(kc);
     }
   }
 }
 
-
+void loop() {  
+  for(int i = klen - 1; i >= 0; i --){
+    if(digitalRead(KEYS[i][0]) == LOW and KEYS[i][1] == 0){
+      KEYS[i][1] = 1;
+      keyAction(i, true);
+      delay(debounce);
+    }else if(digitalRead(KEYS[i][0]) == HIGH and KEYS[i][1] == 1){
+      KEYS[i][1] = 0;
+      keyAction(i, false);
+    }
+  }
+}
