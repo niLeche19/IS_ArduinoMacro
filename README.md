@@ -7,8 +7,11 @@ Current issue:
 -Modifiers do not work (KEY_LEFT_SHIFT is nonfunctional)
 
 
-https://github.com/NicoHood/HID \n
+https://github.com/NicoHood/HID 
+
 This is the lib being used. 
 
+
 https://github.com/NicoHood/HID/blob/master/examples/Keyboard/ImprovedKeyboard/ImprovedKeyboard.ino
+
 Here is an .ino(arduino sketch extension) example of a functional project. 
