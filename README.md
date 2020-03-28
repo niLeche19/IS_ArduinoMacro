@@ -7,7 +7,7 @@ Current issue:
 -Modifiers do not work (KEY_LEFT_SHIFT is nonfunctional)
 
 
-https://github.com/NicoHood/HID 
+https://github.com/NicoHood/HID \n
 This is the lib being used. 
 
 https://github.com/NicoHood/HID/blob/master/examples/Keyboard/ImprovedKeyboard/ImprovedKeyboard.ino
