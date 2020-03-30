@@ -1,6 +1,6 @@
 # IS_ArduinoMacro
 Current issue:
--The library being used to press consumer keys (aka media keys) is broken. Most ASCII keys work as intended, F keys do not work even though they are listed as Keyboard keycodes (F3 for instance prints equals). 
+-The library being used to press consumer keys (aka media keys) is broken. Most ASCII keys work as intended, function keys do not work even though they are listed as Keyboard keycodes (F3 for instance prints equals). 
 
 -Some media keys work and others are nonfunctional (PLAY_PAUSE works but NEXT does not).
 
