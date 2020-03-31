@@ -29,9 +29,7 @@ bool isCons(int key){
 // This either presses or releases the key 'k' depending on the value of 'pr'
 void keyAction(int k, bool pr){
   for(int i = 0; i < 10; i ++){
-    int kc = ConsumerKeycode(ASSMENTS[k][i]);
-    if(kc != 0){
-    }
+    int kc = ASSMENTS[k][i];
     if(pr == 1 and kc != 0){
       if(isCons(kc)){
         Consumer.press(kc);
