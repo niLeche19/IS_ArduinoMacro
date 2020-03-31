@@ -4,7 +4,7 @@
 // Key assignments are stored here.
 int ASSMENTS[][10] = {
   //KEY_1 on top
-  {KEY_F4}, //1
+  {"test string"}, //1
   {MEDIA_VOL_DOWN}, //2
   {MEDIA_VOL_UP}, //3
   {MEDIA_PLAY_PAUSE}, //4
@@ -41,4 +41,5 @@ int KEYS[][2] = {{KEY_1, 0}, {KEY_2, 0}, {KEY_3, 0}, {KEY_4, 0},{KEY_5, 0}, {KEY
 
 //================================================================================
 // Consumer key codes.
+//int CONS[] = {0xB3, 0xB4, 0xB5, 0xB6, 0xB7, 205, 0xE2, 233, 0x18A, 0x192, 0x194, 0x224, 0x225, 0x227, 0xed, 234};
 int CONS[] = {237, 551, 549, 548, 404, 402, 394, 233, 226, 205, 183, 182, 181, 180, 179, 234};
